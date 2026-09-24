@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dadi Carriera FC27 - Live</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <h1>FC27 - DADI CARRIERA</h1>
+    
+    <!-- Tab di Selezione Modalità -->
+    <div class="tabs">
+      <button id="tab-d20" class="tab-btn active" onclick="switchMode('d20')">D20 Imprevisti</button>
+      <button id="tab-d6" class="tab-btn" onclick="switchMode('d6')">D6 Mercato & Bilancio</button>
+    </div>
+
+    <!-- Sotto-Selezione per il D6 -->
+    <div id="d6-options" class="sub-options hidden">
+      <label><input type="radio" name="d6-type" value="bilancio" checked> Bilancio Inizio Stagione</label>
+      <label><input type="radio" name="d6-type" value="mercato"> Trattativa Cessione Big</label>
+    </div>
+    
+    <!-- Display del Dado -->
+    <div id="dice-display">?</div>
+    
+    <!-- Bottone di Lancio -->
+    <button id="roll-btn" onclick="rollDice()">LANCIA IL DADO</button>
+    
+    <!-- Riquadro Risultato -->
+    <div id="result-box">
+      <h2 id="title">Premi il pulsante per lanciare</h2>
+      <p id="description">L'esito del tiro comparirà qui.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

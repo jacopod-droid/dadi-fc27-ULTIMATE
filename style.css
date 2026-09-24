@@ -1,0 +1,132 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: transparent; /* Fondo trasparente per OBS */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.card {
+  background: rgba(20, 20, 20, 0.95);
+  border: 2px solid #00ff88;
+  border-radius: 16px;
+  padding: 20px;
+  width: 390px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+h1 {
+  font-size: 1.1rem;
+  color: #00ff88;
+  margin: 0 0 12px 0;
+  letter-spacing: 1px;
+}
+
+/* Tab di navigazione */
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.tab-btn {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.1);
+  color: #aaa;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.tab-btn.active {
+  background: #00ff88;
+  color: #101010;
+  border-color: #00ff88;
+}
+
+/* Opzioni sotto-menu D6 */
+.sub-options {
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.8rem;
+  color: #ccc;
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.sub-options label {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Display Dado */
+#dice-display {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #fff;
+  transition: transform 0.2s ease;
+}
+
+.rolling {
+  animation: spin 0.4s infinite linear;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg) scale(1.2); }
+  100% { transform: rotate(360deg) scale(1.2); }
+}
+
+/* Bottone Lancio */
+#roll-btn {
+  background-color: #00ff88;
+  color: #101010;
+  border: none;
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#roll-btn:hover {
+  background-color: #00cc66;
+  transform: scale(1.02);
+}
+
+/* Box Esito */
+#result-box {
+  margin-top: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 12px;
+  border-radius: 8px;
+  min-height: 75px;
+}
+
+#title {
+  font-size: 1rem;
+  margin: 0 0 6px 0;
+  color: #00ff88;
+}
+
+#description {
+  font-size: 0.88rem;
+  margin: 0;
+  color: #dddddd;
+  line-height: 1.3;
+}
